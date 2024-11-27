@@ -1,65 +1,23 @@
 ---
 import TabletLayout from "../../layouts/Tablet.astro";
 import App from "../../layouts/App.astro";
+import Header from "../../components/Header.astro";
 ---
 
 <TabletLayout title="Tablet">
   <App>
-    <h1 class="text-lg">Sanatorio Buena Salud</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-      accusantium ad nobis deserunt ea nostrum adipisci odio cumque. Libero
-      necessitatibus ratione fugit est. Aut sequi itaque fuga numquam eum nihil?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-      accusantium ad nobis deserunt ea nostrum adipisci odio cumque. Libero
-      necessitatibus ratione fugit est. Aut sequi itaque fuga numquam eum nihil?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-      accusantium ad nobis deserunt ea nostrum adipisci odio cumque. Libero
-      necessitatibus ratione fugit est. Aut sequi itaque fuga numquam eum nihil?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-      accusantium ad nobis deserunt ea nostrum adipisci odio cumque. Libero
-      necessitatibus ratione fugit est. Aut sequi itaque fuga numquam eum nihil?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-      accusantium ad nobis deserunt ea nostrum adipisci odio cumque. Libero
-      necessitatibus ratione fugit est. Aut sequi itaque fuga numquam eum nihil?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-      accusantium ad nobis deserunt ea nostrum adipisci odio cumque. Libero
-      necessitatibus ratione fugit est. Aut sequi itaque fuga numquam eum nihil?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-      accusantium ad nobis deserunt ea nostrum adipisci odio cumque. Libero
-      necessitatibus ratione fugit est. Aut sequi itaque fuga numquam eum nihil?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-      accusantium ad nobis deserunt ea nostrum adipisci odio cumque. Libero
-      necessitatibus ratione fugit est. Aut sequi itaque fuga numquam eum nihil?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-      accusantium ad nobis deserunt ea nostrum adipisci odio cumque. Libero
-      necessitatibus ratione fugit est. Aut sequi itaque fuga numquam eum nihil?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-      accusantium ad nobis deserunt ea nostrum adipisci odio cumque. Libero
-      necessitatibus ratione fugit est. Aut sequi itaque fuga numquam eum nihil?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-      accusantium ad nobis deserunt ea nostrum adipisci odio cumque. Libero
-      necessitatibus ratione fugit est. Aut sequi itaque fuga numquam eum nihil?
-    </p>
+    <Header text="Sanatorio Buena Salud" />
+    <div class="grid grid-cols-2 gap-6">
+      <a
+        href="/tablet/reserva-internacion"
+        class="h-40 bg-sky-300 rounded-lg shadow-2xl shadow-sky-300 hover:shadow-sky-500 hover:scale-105 transition-all z-0 hover:z-10 duration-300 text-xl p-4 grid items-center text-center text-pretty font-bold uppercase"
+        >Reserva de internación</a
+      >
+      <a
+        href="/tablet/check-in"
+        class="h-40 bg-sky-300 rounded-lg shadow-2xl shadow-sky-300 hover:shadow-sky-500 hover:scale-105 transition-all z-0 hover:z-10 duration-300 text-xl p-4 grid items-center text-center text-pretty font-bold uppercase"
+        >Check-in virtual</a
+      >
+    </div>
   </App>
 </TabletLayout>
