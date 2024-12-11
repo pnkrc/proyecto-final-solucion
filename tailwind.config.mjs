@@ -57,6 +57,9 @@ export default {
         "3/4": "3 / 4",
         "4/3": "4 / 3",
       },
+      gridTemplateColumns: {
+        "2-auto": "repeat(2, auto)",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
