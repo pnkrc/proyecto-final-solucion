@@ -1,0 +1,23 @@
+---
+
+---
+
+<div class="device device-ipad-pro">
+  <div class="device-frame overflow-hidden">
+    <div class="device-screen overflow-scroll scrollbar-none">
+      <slot />
+    </div>
+  </div>
+  <div class="device-stripe"></div>
+  <div class="device-header"></div>
+  <div class="device-sensors"></div>
+  <div class="device-btns"></div>
+  <div class="device-power"></div>
+  <div class="device-home"></div>
+</div>
+
+<style>
+  .transformed {
+    transform: perspective(60rem) rotateX(5deg) rotateY(-15deg);
+  }
+</style>

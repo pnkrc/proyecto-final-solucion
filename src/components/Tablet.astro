@@ -1,21 +1,28 @@
----
-
----
-
-<div class="device device-ipad-pro">
-  <div class="device-frame">
-    <div class="device-screen overflow-scroll">
-      <slot />
-    </div>
+<div
+  class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[454px] md:h-[682px] aspect-3/4"
+>
+  <div
+    class="h-[32px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[72px] rounded-s-lg"
+  >
   </div>
-  <div class="device-stripe"></div>
-  <div class="device-header"></div>
-  <div class="device-sensors"></div>
-  <div class="device-btns"></div>
-  <div class="device-power"></div>
-  <div class="device-home"></div>
+  <div
+    class="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[124px] rounded-s-lg"
+  >
+  </div>
+  <div
+    class="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg"
+  >
+  </div>
+  <div
+    class="h-[64px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"
+  >
+  </div>
+  <div
+    class="rounded-[2rem] overflow-hidden h-[426px] md:h-[654px] bg-white dark:bg-gray-800"
+  >
+    <slot />
+  </div>
 </div>
-
 <style>
   .transformed {
     transform: perspective(60rem) rotateX(5deg) rotateY(-15deg);
