@@ -41,6 +41,10 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "tailwind-scrollbar": "^3.1.0"
+    "@iconify/json": "^2.2.282",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "tailwind-scrollbar": "^3.1.0",
+    "unplugin-icons": "^0.21.0"
   }
 }

@@ -2,10 +2,12 @@
 import TabletLayout from "../../layouts/Tablet.astro";
 import App from "../../layouts/App.astro";
 import Header from "../../components/Header.astro";
+import { CheckInVirtual } from "@/components/CheckInVirtual";
 ---
 
 <TabletLayout title="Check-in virtual">
   <App>
     <Header text="Check-in virtual" />
+    <CheckInVirtual client:only="react" />
   </App>
 </TabletLayout>

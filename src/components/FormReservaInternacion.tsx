@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/select";
 import { useState } from "react";
 import { MultiSelect } from "./ui/multi-select";
+import { Input } from "./ui/input";
 
 const quirofanoOptions = [
   { value: "quirofano-1", label: "Quirófano grande 1" },
@@ -65,10 +66,10 @@ export function FormReservaInternacion() {
               </div>
 
               <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
-                <Label htmlFor="date" className="col-start-1 col-end-2">
+                <Label htmlFor="quirofano" className="col-start-1 col-end-2">
                   Quirófano
                 </Label>
-                <div className="col-start-2 col-end-3">
+                <div className="col-start-2 col-end-3" id="quirofano">
                   <Select>
                     <SelectTrigger>
                       <SelectValue placeholder="Seleccionar quirófano" />
@@ -85,10 +86,11 @@ export function FormReservaInternacion() {
               </div>
 
               <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
-                <Label htmlFor="date" className="col-start-1 col-end-2">
+                <Label htmlFor="time" className="col-start-1 col-end-2">
                   Horarios
                 </Label>
                 <MultiSelect
+                  id="time"
                   className="col-start-2 col-end-3"
                   options={availableTimes}
                   onValueChange={setSelectedTimes}
@@ -104,15 +106,99 @@ export function FormReservaInternacion() {
           </Card>
         </TabsContent>
         <TabsContent value="registro">
-          <div className="p-5 flex flex-col">
-            <h1 className="text-2xl font-bold">Registro pre-internación</h1>
-            <p className="text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              elementum feugiat scelerisque. Proin non vehicula elit. Sed
-              elementum feugiat scelerisque. Proin non vehicula elit. Sed
-              elementum feugiat scelerisque. Proin non vehicula elit.
-            </p>
-          </div>
+          <Card>
+            <CardHeader>
+              <CardTitle>Registro de pre-internación</CardTitle>
+              <CardDescription></CardDescription>
+            </CardHeader>
+            <CardContent className="grid grid-cols-2-auto gap-4 ">
+              <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
+                <Label htmlFor="documento" className="col-start-1 col-end-2">
+                  Número de documento
+                </Label>
+                <Input
+                  id="documento"
+                  placeholder="Número de documento"
+                  value="35.418.290"
+                />
+              </div>
+
+              <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
+                <Label htmlFor="apellidos" className="col-start-1 col-end-2">
+                  Apellidos
+                </Label>
+                <Input
+                  id="apellidos"
+                  placeholder="Apellidos"
+                  value="Martínez"
+                />
+              </div>
+
+              <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
+                <Label htmlFor="nombres" className="col-start-1 col-end-2">
+                  Nombres
+                </Label>
+                <Input id="nombres" placeholder="Nombres" value="Emiliano" />
+              </div>
+
+              <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
+                <Label htmlFor="obra" className="col-start-1 col-end-2">
+                  Obra social
+                </Label>
+                <Input id="obra" placeholder="Obra social" value="SanCor" />
+              </div>
+
+              <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
+                <Label
+                  htmlFor="procedimiento"
+                  className="col-start-1 col-end-2"
+                >
+                  Procedimiento
+                </Label>
+                <Input
+                  id="procedimiento"
+                  placeholder="Procedimiento"
+                  value="Hernioplastía"
+                />
+              </div>
+
+              <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
+                <Label
+                  htmlFor="durprocedimiento"
+                  className="col-start-1 col-end-2"
+                >
+                  Duración del procedimiento
+                </Label>
+                <Input
+                  id="durprocedimiento"
+                  placeholder="Duración estimada del procedimiento"
+                  value="1 hora 30 minutos"
+                />
+              </div>
+
+              <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
+                <Label htmlFor="durpreop" className="col-start-1 col-end-2">
+                  Duración del pre-operatiorio
+                </Label>
+                <Input
+                  id="durpreop"
+                  placeholder="Duración estimada del pre-operatiorio"
+                  value="2 horas"
+                />
+              </div>
+
+              <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
+                <Label htmlFor="durpostop" className="col-start-1 col-end-2">
+                  Duración del post-operatiorio
+                </Label>
+                <Input
+                  id="durpostop"
+                  placeholder="Duración estimada del post-operatiorio"
+                  value="2 horas"
+                />
+              </div>
+            </CardContent>
+          </Card>
         </TabsContent>
       </Tabs>
     </div>
