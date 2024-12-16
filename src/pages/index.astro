@@ -1,12 +1,12 @@
 ---
 import TabletLayout from "../layouts/Tablet.astro";
 import App from "../layouts/App.astro";
-import Header from "../components/Header.astro";
+import Navigation from "@/components/Navigation";
 ---
 
 <TabletLayout title="Tablet">
   <App>
-    <Header text="Sanatorio Ramírez" />
+    <Navigation client:load header="Sanatorio Ramírez" />
     <div class="grid grid-cols-2 gap-6">
       <a
         href="/tablet/reserva-internacion"

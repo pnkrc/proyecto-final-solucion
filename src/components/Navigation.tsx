@@ -61,7 +61,7 @@ export default function Navigation(props: NavigationProps) {
           <DropdownMenuTrigger>
             <Button variant="ghost" size={"sm"} className="rounded-full">
               <Notifications />
-              <Badge className="rounded-full" variant="outline">
+              <Badge className="rounded-full" variant="destructive">
                 3
               </Badge>
             </Button>
