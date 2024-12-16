@@ -26,7 +26,7 @@ export function CheckInVirtual() {
 
   const allTabsVisited = useMemo(
     () => Object.values(visitedTabs).every((tab) => tab),
-    [visitedTabs.cama, visitedTabs.contacto, visitedTabs.estudios]
+    [visitedTabs, visitedTabs, visitedTabs]
   );
 
   return (
@@ -58,14 +58,16 @@ export function CheckInVirtual() {
             <TabsList className="mx-auto">
               <TabsTrigger
                 value="cama"
-                onClick={() => setVisitedTabs({ ...visitedTabs, cama: true })}
+                onClick={() =>
+                  setVisitedTabs((prev) => ({ ...prev, cama: true }))
+                }
               >
                 Cama
               </TabsTrigger>
               <TabsTrigger
                 value="contacto"
                 onClick={() =>
-                  setVisitedTabs({ ...visitedTabs, contacto: true })
+                  setVisitedTabs((prev) => ({ ...prev, contacto: true }))
                 }
               >
                 Contacto
@@ -73,7 +75,7 @@ export function CheckInVirtual() {
               <TabsTrigger
                 value="estudios"
                 onClick={() =>
-                  setVisitedTabs({ ...visitedTabs, estudios: true })
+                  setVisitedTabs((prev) => ({ ...prev, estudios: true }))
                 }
               >
                 Estudios

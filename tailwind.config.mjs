@@ -59,6 +59,7 @@ export default {
       },
       gridTemplateColumns: {
         "2-auto": "repeat(2, auto)",
+        "auto-1-auto": "1fr auto 1fr",
       },
     },
   },

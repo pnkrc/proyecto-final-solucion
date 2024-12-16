@@ -1,0 +1,13 @@
+---
+import TabletLayout from "@/layouts/Tablet.astro";
+import App from "@/layouts/App.astro";
+import Navigation from "@/components/Navigation";
+import { AdmisionDerivacion } from "@/components/AdmisionDerivacion";
+---
+
+<TabletLayout title="Derivación - Atención en admisión">
+  <App>
+    <Navigation client:load header="Derivación" />
+    <AdmisionDerivacion client:load />
+  </App>
+</TabletLayout>

@@ -1,13 +1,13 @@
 ---
 import TabletLayout from "../../layouts/Tablet.astro";
 import App from "../../layouts/App.astro";
-import Header from "../../components/Header.astro";
 import { FormReservaInternacion } from "../../components/FormReservaInternacion";
+import Navigation from "@/components/Navigation";
 ---
 
 <TabletLayout title="Reserva de internación">
   <App>
-    <Header text="Reserva de internación" />
-    <FormReservaInternacion client:only="react" />
+    <Navigation client:load header="Reserva de internación" />
+    <FormReservaInternacion client:load />
   </App>
 </TabletLayout>

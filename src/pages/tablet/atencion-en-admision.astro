@@ -1,0 +1,13 @@
+---
+import TabletLayout from "@/layouts/Tablet.astro";
+import App from "@/layouts/App.astro";
+import { AtencionAdmision } from "@/components/AtencionAdmision";
+import Navigation from "@/components/Navigation";
+---
+
+<TabletLayout title="Atención en admisión">
+  <App>
+    <Navigation client:load header="Atención en admisión" />
+    <AtencionAdmision client:load />
+  </App>
+</TabletLayout>

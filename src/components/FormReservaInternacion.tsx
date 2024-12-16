@@ -51,7 +51,7 @@ export function FormReservaInternacion() {
               <CardTitle>Agenda de quirófano</CardTitle>
               <CardDescription></CardDescription>
             </CardHeader>
-            <CardContent className="grid grid-cols-2-auto gap-4 ">
+            <CardContent className="grid grid-cols-2-auto gap-4">
               <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
                 <Label htmlFor="date" className="col-start-1 col-end-2">
                   Fecha
