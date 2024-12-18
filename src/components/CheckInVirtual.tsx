@@ -3,18 +3,44 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
-
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "./ui/skeleton";
 
 import ScanDocumentIcon from "~icons/material-symbols/document-scanner-outline";
+import CheckBoxBlankIcon from "~icons/material-symbols/check-box-outline-blank";
+import CheckBoxIcon from "~icons/material-symbols/check-box-rounded";
+
+const camas = [
+  {
+    id: 1,
+    tipo: "Compartida",
+    costo_extra: "$ 0",
+  },
+  {
+    id: 2,
+    tipo: "Individual",
+    costo_extra: "$ 3000",
+  },
+  {
+    id: 3,
+    tipo: "Premium",
+    costo_extra: "$ 5000",
+  },
+];
 
 export function CheckInVirtual() {
   const [buscado, setBuscado] = useState<boolean>(false);
@@ -23,6 +49,7 @@ export function CheckInVirtual() {
     contacto: boolean;
     estudios: boolean;
   }>({ cama: false, contacto: false, estudios: false });
+  const [camaSeleccionada, setCamaSeleccionada] = useState<number>(1);
 
   const allTabsVisited = useMemo(
     () => Object.values(visitedTabs).every((tab) => tab),
@@ -36,7 +63,7 @@ export function CheckInVirtual() {
           <CardHeader>
             <CardTitle>Ingresar CUIL</CardTitle>
           </CardHeader>
-          <CardContent className="grid grid-cols-2-auto gap-4 ">
+          <CardContent className="grid grid-cols-2-auto gap-4">
             <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
               <Label htmlFor="cuil" className="col-start-1 col-end-2">
                 CUIL
@@ -85,7 +112,39 @@ export function CheckInVirtual() {
                 <CardHeader>
                   <CardTitle>Tipos de camas disponibles</CardTitle>
                 </CardHeader>
-                <CardContent className="grid grid-cols-2-auto gap-4 "></CardContent>
+                <CardContent className="grid grid-cols-2-auto gap-4">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead className="font-bold">Tipo</TableHead>
+                        <TableHead className="font-bold">
+                          Costo adicional por día
+                        </TableHead>
+                        <TableHead className="font-bold">
+                          Seleccionada
+                        </TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {camas.map((cama) => (
+                        <TableRow
+                          key={cama.id}
+                          onClick={() => setCamaSeleccionada(cama.id)}
+                        >
+                          <TableCell>{cama.tipo}</TableCell>
+                          <TableCell>{cama.costo_extra}</TableCell>
+                          <TableCell className="flex justify-center">
+                            {camaSeleccionada === cama.id ? (
+                              <CheckBoxIcon />
+                            ) : (
+                              <CheckBoxBlankIcon />
+                            )}
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </CardContent>
               </Card>
             </TabsContent>
             <TabsContent value="contacto">
@@ -93,7 +152,7 @@ export function CheckInVirtual() {
                 <CardHeader>
                   <CardTitle>Ingresar familiar de contacto</CardTitle>
                 </CardHeader>
-                <CardContent className="grid grid-cols-2-auto gap-4 ">
+                <CardContent className="grid grid-cols-2-auto gap-4">
                   <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
                     <Label
                       htmlFor="documento"
