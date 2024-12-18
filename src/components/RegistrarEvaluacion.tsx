@@ -20,6 +20,7 @@ export function RegistrarEvaluacion() {
           <Input
             id="temp"
             placeholder="Temperatura"
+            readOnly
             value={paciente.signos.max_temp}
           />
         </div>
@@ -31,6 +32,7 @@ export function RegistrarEvaluacion() {
           <Input
             id="presion"
             placeholder="Presión arterial"
+            readOnly
             value={paciente.signos.presion}
           />
         </div>
@@ -42,6 +44,7 @@ export function RegistrarEvaluacion() {
           <Input
             id="oxigeno"
             placeholder="Saturación de oxígeno"
+            readOnly
             value={paciente.signos.saturacion_o2}
           />
         </div>
@@ -53,6 +56,7 @@ export function RegistrarEvaluacion() {
           <Input
             id="frecuencia"
             placeholder="Frecuencia cardiaca"
+            readOnly
             value={paciente.signos.frecuencia_cardiaca}
           />
         </div>
@@ -61,7 +65,12 @@ export function RegistrarEvaluacion() {
           <Label htmlFor="fecha" className="col-start-1 col-end-2">
             Fecha
           </Label>
-          <Input id="fecha" placeholder="Fecha" value="20/10/2024 - 15:00" />
+          <Input
+            id="fecha"
+            placeholder="Fecha"
+            readOnly
+            value="20/10/2024 - 15:00"
+          />
         </div>
         {/* notas */}
 
@@ -72,6 +81,7 @@ export function RegistrarEvaluacion() {
           <Textarea
             id="notas"
             placeholder="Notas"
+            readOnly
             value="Controlar hidratación."
             rows={4}
           />
