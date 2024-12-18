@@ -43,7 +43,7 @@ export const pacientes = [
 export function AtencionPiso() {
   return (
     <div className="flex flex-col justify-center gap-4">
-      <div>
+      <div className="flex gap-2">
         <Button
           size="sm"
           onClick={() =>
@@ -51,6 +51,14 @@ export function AtencionPiso() {
           }
         >
           Registrar evaluación
+        </Button>
+        <Button
+          size="sm"
+          onClick={() =>
+            (window.location.href = "/tablet/atencion-en-piso/registro-medico")
+          }
+        >
+          Registrar evaluación (médico)
         </Button>
       </div>
       <Card>
