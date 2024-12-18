@@ -59,7 +59,6 @@ export function AtencionAdmision() {
       <Card>
         <CardHeader>
           <CardTitle>Buscar pre-internación</CardTitle>
-          <CardDescription></CardDescription>
         </CardHeader>
         <CardContent className="grid grid-cols-2-auto gap-4 ">
           <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">

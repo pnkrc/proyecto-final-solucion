@@ -12,6 +12,7 @@ import {
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { traslados } from "@/components/Traslados";
 
 interface NavigationProps {
   header: string;
@@ -38,33 +39,6 @@ const notificaciones = [
     fecha: "25/11/2024 - 20:15",
     nombre: "Peter Czech",
     href: "/tablet/atencion-en-admision/agenda-traslado?id=3",
-  },
-];
-
-const traslados = [
-  {
-    id: 1,
-    origen: "Cama 10 [Piso]",
-    destino: "Cama 2 [UTI]",
-    paciente: "Juan Romero",
-    metodo: "Silla de ruedas",
-    href: "/tablet/traslados/1",
-  },
-  {
-    id: 2,
-    origen: "Cama 4 [UTI]",
-    destino: "Cama 15 [Piso]",
-    paciente: "Javier García",
-    metodo: "Camilla",
-    href: "/tablet/traslados/2",
-  },
-  {
-    id: 3,
-    origen: "Guardia",
-    destino: "Cama 4 [Piso]",
-    paciente: "Peter Czech",
-    metodo: "Camilla",
-    href: "/tablet/traslados/3",
   },
 ];
 

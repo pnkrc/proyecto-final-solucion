@@ -131,7 +131,6 @@ export function FormReservaInternacion() {
           <Card>
             <CardHeader>
               <CardTitle>Agenda de quirófano</CardTitle>
-              <CardDescription></CardDescription>
             </CardHeader>
             <CardContent className="grid grid-cols-2-auto gap-4">
               <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">

@@ -35,7 +35,6 @@ export function CheckInVirtual() {
         <Card>
           <CardHeader>
             <CardTitle>Ingresar CUIL</CardTitle>
-            <CardDescription></CardDescription>
           </CardHeader>
           <CardContent className="grid grid-cols-2-auto gap-4 ">
             <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
@@ -85,7 +84,6 @@ export function CheckInVirtual() {
               <Card>
                 <CardHeader>
                   <CardTitle>Tipos de camas disponibles</CardTitle>
-                  <CardDescription></CardDescription>
                 </CardHeader>
                 <CardContent className="grid grid-cols-2-auto gap-4 "></CardContent>
               </Card>
@@ -94,7 +92,6 @@ export function CheckInVirtual() {
               <Card>
                 <CardHeader>
                   <CardTitle>Ingresar familiar de contacto</CardTitle>
-                  <CardDescription></CardDescription>
                 </CardHeader>
                 <CardContent className="grid grid-cols-2-auto gap-4 ">
                   <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
@@ -199,7 +196,6 @@ export function CheckInVirtual() {
               <Card>
                 <CardHeader>
                   <CardTitle>Cargar estudios pre-quirurgicos</CardTitle>
-                  <CardDescription></CardDescription>
                 </CardHeader>
                 <CardContent className="flex justify-center">
                   <Skeleton className="aspect-3/4 w-32 rounded-md grid items-center justify-center">

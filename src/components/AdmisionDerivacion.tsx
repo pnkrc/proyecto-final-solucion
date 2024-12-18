@@ -53,7 +53,6 @@ export function AdmisionDerivacion() {
       <Card>
         <CardHeader>
           <CardTitle>Agendar fecha de traslado</CardTitle>
-          <CardDescription></CardDescription>
         </CardHeader>
 
         <CardContent className="grid grid-cols-2-auto gap-4">
