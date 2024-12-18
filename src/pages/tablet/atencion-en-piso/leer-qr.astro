@@ -1,0 +1,13 @@
+---
+import TabletLayout from "@/layouts/Tablet.astro";
+import App from "@/layouts/App.astro";
+import Navigation from "@/components/Navigation";
+import { InformacionEvaluacion} from "@/components/InformacionEvaluacion";
+---
+
+<TabletLayout title="Ronda de evaluación">
+  <App>
+    <Navigation client:load header="Ronda de evaluación" /> 
+    <InformacionEvaluacion client:load />
+  </App>
+</TabletLayout>

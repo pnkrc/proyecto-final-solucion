@@ -1,0 +1,13 @@
+---
+import TabletLayout from "@/layouts/Tablet.astro";
+import App from "@/layouts/App.astro";
+import Navigation from "@/components/Navigation";
+import { AtencionPiso } from "@/components/AtencionEnPiso";
+---
+
+<TabletLayout title="Atención médica en piso">
+  <App>
+    <Navigation client:load header="Atención médica en piso" /> 
+    <AtencionPiso client:load />
+  </App>
+</TabletLayout>

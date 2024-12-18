@@ -63,21 +63,21 @@ export function Traslados() {
               <h2 className="font-bold">{traslado.paciente}</h2>
               <p>
                 <span className="font-bold text-xs text-muted-foreground">
-                  Origen:
+                  Origen
                 </span>
                 <br />
                 {traslado.origen}
               </p>
               <p>
                 <span className="font-bold text-xs text-muted-foreground">
-                  Destino:
+                  Destino
                 </span>
                 <br />
                 {traslado.destino}
               </p>
               <p>
                 <span className="font-bold text-xs text-muted-foreground">
-                  Método de traslado:
+                  Método de traslado
                 </span>
                 <br />
                 {traslado.metodo}
