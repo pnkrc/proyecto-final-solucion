@@ -42,13 +42,13 @@ const estudios = [
   },
 ];
 
-export function EstudiosExternos() {
+export function EstudiosPresentados() {
   return (
     <div className="flex flex-col justify-center">
       <Card>
         <CardHeader>
-          <CardTitle>Estudios presentacos</CardTitle>
-          <CardDescription>Paciente: Javier García</CardDescription>
+          <CardTitle>Estudios presentados</CardTitle>
+          <CardDescription>Paciente: Enzo Suárez</CardDescription>
         </CardHeader>
         <CardContent>
           <Table className="text-xs cursor-default">

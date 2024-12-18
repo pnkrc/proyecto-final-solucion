@@ -1,0 +1,13 @@
+---
+import TabletLayout from "@/layouts/Tablet.astro";
+import App from "@/layouts/App.astro";
+import Navigation from "@/components/Navigation";
+import { PreInternacion as PI } from "@/components/PreInternacion";
+---
+
+<TabletLayout title="Pre-internación - Atención en admisión">
+  <App>
+    <Navigation client:load header="Pre-internación" />
+    <PI client:load />
+  </App>
+</TabletLayout>

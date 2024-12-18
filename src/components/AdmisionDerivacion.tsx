@@ -76,7 +76,7 @@ export function AdmisionDerivacion() {
             <Input
               id="apellidos"
               placeholder="Apellidos"
-              value={notificaciones[0].nombre.split(" ")[1]}
+              value={notificaciones[1].nombre.split(" ")[1]}
               disabled
             />
           </div>
@@ -88,7 +88,7 @@ export function AdmisionDerivacion() {
             <Input
               id="nombres"
               placeholder="Nombres"
-              value={notificaciones[0].nombre.split(" ")[0]}
+              value={notificaciones[1].nombre.split(" ")[0]}
               disabled
             />
           </div>

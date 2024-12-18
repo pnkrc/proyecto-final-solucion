@@ -30,6 +30,88 @@ const timeOptions = Array.from({ length: 10 }, (_, i) => i).map((i) => ({
   label: `${(i + 8).toString().padStart(2, "0")}:00 - ${(i + 9).toString().padStart(2, "0")}:00`,
 }));
 
+export function RegistroPreInternacion() {
+  return (
+    <div className="grid grid-cols-2-auto gap-4">
+      <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
+        <Label htmlFor="documento" className="col-start-1 col-end-2">
+          Número de documento
+        </Label>
+        <Input
+          id="documento"
+          placeholder="Número de documento"
+          value="35.418.290"
+        />
+      </div>
+
+      <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
+        <Label htmlFor="apellidos" className="col-start-1 col-end-2">
+          Apellidos
+        </Label>
+        <Input id="apellidos" placeholder="Apellidos" value="Martínez" />
+      </div>
+
+      <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
+        <Label htmlFor="nombres" className="col-start-1 col-end-2">
+          Nombres
+        </Label>
+        <Input id="nombres" placeholder="Nombres" value="Emiliano" />
+      </div>
+
+      <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
+        <Label htmlFor="obra" className="col-start-1 col-end-2">
+          Obra social
+        </Label>
+        <Input id="obra" placeholder="Obra social" value="SanCor" />
+      </div>
+
+      <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
+        <Label htmlFor="procedimiento" className="col-start-1 col-end-2">
+          Procedimiento
+        </Label>
+        <Input
+          id="procedimiento"
+          placeholder="Procedimiento"
+          value="Hernioplastía"
+        />
+      </div>
+
+      <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
+        <Label htmlFor="durprocedimiento" className="col-start-1 col-end-2">
+          Duración del procedimiento
+        </Label>
+        <Input
+          id="durprocedimiento"
+          placeholder="Duración estimada del procedimiento"
+          value="1 hora 30 minutos"
+        />
+      </div>
+
+      <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
+        <Label htmlFor="durpreop" className="col-start-1 col-end-2">
+          Duración del pre-operatiorio
+        </Label>
+        <Input
+          id="durpreop"
+          placeholder="Duración estimada del pre-operatiorio"
+          value="2 horas"
+        />
+      </div>
+
+      <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
+        <Label htmlFor="durpostop" className="col-start-1 col-end-2">
+          Duración del post-operatiorio
+        </Label>
+        <Input
+          id="durpostop"
+          placeholder="Duración estimada del post-operatiorio"
+          value="2 horas"
+        />
+      </div>
+    </div>
+  );
+}
+
 export function FormReservaInternacion() {
   const [date, setDate] = useState<Date>();
   const [selectedTimes, setSelectedTimes] = useState<Array<string>>([]);
@@ -76,7 +158,7 @@ export function FormReservaInternacion() {
                     </SelectTrigger>
                     <SelectContent>
                       {quirofanoOptions.map((option) => (
-                        <SelectItem value={option.value}>
+                        <SelectItem value={option.value} key={option.value}>
                           {option.label}
                         </SelectItem>
                       ))}
@@ -109,94 +191,9 @@ export function FormReservaInternacion() {
           <Card>
             <CardHeader>
               <CardTitle>Registro de pre-internación</CardTitle>
-              <CardDescription></CardDescription>
             </CardHeader>
-            <CardContent className="grid grid-cols-2-auto gap-4 ">
-              <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
-                <Label htmlFor="documento" className="col-start-1 col-end-2">
-                  Número de documento
-                </Label>
-                <Input
-                  id="documento"
-                  placeholder="Número de documento"
-                  value="35.418.290"
-                />
-              </div>
-
-              <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
-                <Label htmlFor="apellidos" className="col-start-1 col-end-2">
-                  Apellidos
-                </Label>
-                <Input
-                  id="apellidos"
-                  placeholder="Apellidos"
-                  value="Martínez"
-                />
-              </div>
-
-              <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
-                <Label htmlFor="nombres" className="col-start-1 col-end-2">
-                  Nombres
-                </Label>
-                <Input id="nombres" placeholder="Nombres" value="Emiliano" />
-              </div>
-
-              <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
-                <Label htmlFor="obra" className="col-start-1 col-end-2">
-                  Obra social
-                </Label>
-                <Input id="obra" placeholder="Obra social" value="SanCor" />
-              </div>
-
-              <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
-                <Label
-                  htmlFor="procedimiento"
-                  className="col-start-1 col-end-2"
-                >
-                  Procedimiento
-                </Label>
-                <Input
-                  id="procedimiento"
-                  placeholder="Procedimiento"
-                  value="Hernioplastía"
-                />
-              </div>
-
-              <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
-                <Label
-                  htmlFor="durprocedimiento"
-                  className="col-start-1 col-end-2"
-                >
-                  Duración del procedimiento
-                </Label>
-                <Input
-                  id="durprocedimiento"
-                  placeholder="Duración estimada del procedimiento"
-                  value="1 hora 30 minutos"
-                />
-              </div>
-
-              <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
-                <Label htmlFor="durpreop" className="col-start-1 col-end-2">
-                  Duración del pre-operatiorio
-                </Label>
-                <Input
-                  id="durpreop"
-                  placeholder="Duración estimada del pre-operatiorio"
-                  value="2 horas"
-                />
-              </div>
-
-              <div className="space-y-1 grid grid-cols-subgrid col-span-full items-center">
-                <Label htmlFor="durpostop" className="col-start-1 col-end-2">
-                  Duración del post-operatiorio
-                </Label>
-                <Input
-                  id="durpostop"
-                  placeholder="Duración estimada del post-operatiorio"
-                  value="2 horas"
-                />
-              </div>
+            <CardContent>
+              <RegistroPreInternacion />
             </CardContent>
           </Card>
         </TabsContent>
